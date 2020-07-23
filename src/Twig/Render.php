@@ -12,17 +12,33 @@
 		 * Render constructor.
 		 *
 		 * @param $path
+		 * @param array $extra_paths
+		 *
+		 * @throws \Twig\Error\LoaderError
 		 */
-		public function __construct( $path ) {
+		public function __construct( $path, $extra_paths = [] ) {
 			$this->path = $path;
 			$this->environment = new Environment( $this->path );
 			$this->storage_path = __DIR__ .'/../../storage/';
+			
 			if( !is_dir( $this->storage_path ) ) {
 				mkdir( $this->storage_path, 0755 );
 			}
 			
+			// Create the loader
 			$loader = new FilesystemLoader( $this->path );
 			$loader->addPath( $this->path );
+			
+			// Add extra paths
+			if( !empty( $extra_paths ) )
+			{
+				foreach( $extra_paths as $extra_path )
+				{
+					$loader->addPath( $extra_path );
+				}
+			}
+			
+			// Set the loader
 			$this->environment->twig->setLoader( $loader );
 		}
 		
@@ -34,8 +50,6 @@
 			
 			// Debugging
 			file_put_contents( $this->storage_path . time() .'.html', $content );
-			
-			
 			
 			return $content;
 		}
