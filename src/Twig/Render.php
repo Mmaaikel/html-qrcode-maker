@@ -53,4 +53,11 @@
 			
 			return $content;
 		}
+		
+		/**
+		 * @return Environment
+		 */
+		public function getEnvironment() {
+			return $this->environment;
+		}
 	}

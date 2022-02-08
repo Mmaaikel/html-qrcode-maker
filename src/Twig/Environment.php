@@ -73,4 +73,11 @@
 					return mime_content_type( $image );
 			}
 		}
+		
+		/**
+		 * @return Twig\Environment
+		 */
+		public function getTwig() {
+			return $this->twig;
+		}
 	}
