@@ -1,7 +1,7 @@
 {
   "name": "mmaaikel/html-qrcode-maker",
   "type": "library",
-  "version": "0.0.6",
+  "version": "0.0.8",
   "description": "A simplified version of the HTML QR-code maker for easily generating a Twig file into a HTML.",
   "homepage": "https://github.com/Mmaaikel/html-qrcode-maker",
   "license": "MIT",
@@ -12,9 +12,9 @@
   },
   "require": {
     "php": ">=7.4",
-    "twig/twig": "^3.0",
-    "chillerlan/php-qrcode": "^4.1",
-    "picqer/php-barcode-generator": "^0.3.0"
+    "twig/twig": "~3.0",
+    "chillerlan/php-qrcode": "~4.1",
+    "picqer/php-barcode-generator": "~v2.2.2"
   },
   "minimum-stability": "dev"
 }
