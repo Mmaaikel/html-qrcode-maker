@@ -13,7 +13,7 @@
   "require": {
     "php": ">=7.4",
     "twig/twig": "~3.0",
-    "chillerlan/php-qrcode": "~4.1",
+    "chillerlan/php-qrcode": "~4.3.4",
     "picqer/php-barcode-generator": "~v2.2.2"
   },
   "minimum-stability": "dev"
