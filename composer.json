@@ -1,7 +1,7 @@
 {
   "name": "mmaaikel/html-qrcode-maker",
   "type": "library",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "A simplified version of the HTML QR-code maker for easily generating a Twig file into a HTML.",
   "homepage": "https://github.com/Mmaaikel/html-qrcode-maker",
   "license": "MIT",
